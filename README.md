@@ -220,7 +220,7 @@ let decrypted = try! encryptedBase64.decryptBase64ToString(AES(key: "secret0key0
 ...under the hood, this is [UInt8] converted to NSData converted to Base64 string representation:
 
 ```swift
-let encryptedBytes: [UInt8] = try "my secret string".encrypt(AES(key: "secret0key000000", iv: "0123456789012345"))
+let encryptedBytes: [UInt8] = try! "my secret string".encrypt(AES(key: "secret0key000000", iv: "0123456789012345"))
 
 let base64 = NSData(bytes: encryptedBytes).base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
 ```
