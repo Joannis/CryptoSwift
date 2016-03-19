@@ -87,7 +87,7 @@ extension Int {
 // Left operator
 
 /** shift left and assign with bits truncation */
-public func &<<= (inout lhs: Int, rhs: Int) {
+public func &<<= ( lhs: inout Int, rhs: Int) {
     lhs.shiftLeft(rhs)
 }
 
@@ -101,7 +101,7 @@ public func &<< (lhs: Int, rhs: Int) -> Int {
 // Right operator
 
 /** shift right and assign with bits truncation */
-func &>>= (inout lhs: Int, rhs: Int) {
+func &>>= ( lhs: inout Int, rhs: Int) {
     lhs.shiftRight(rhs)
 }
 

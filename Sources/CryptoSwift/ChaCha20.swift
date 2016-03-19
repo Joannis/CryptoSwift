@@ -159,7 +159,7 @@ final public class ChaCha20 {
         }
     }
     
-    private final func quarterround(inout a:UInt32, inout _ b:UInt32, inout _ c:UInt32, inout _ d:UInt32) {
+    private final func quarterround( a:inout UInt32, _ b:inout UInt32, _ c:inout UInt32, _ d:inout UInt32) {
         a = a &+ b
         d = rotateLeft((d ^ a), 16) //FIXME: WAT? n:
         
